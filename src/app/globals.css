@@ -25,3 +25,32 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+body {
+  background-image: url('/9vry.gif');
+  background-size: cover;
+  /* Add any additional styling as needed */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Apply animation to the background element */
+.animate-background {
+  animation: gradientAnimation 5s infinite;
+}
+
+@layer utilities {
+  .bg-gradient-textgradient {
+    background: linear-gradient(var(--gradient-textgradient));
+  }
+}
