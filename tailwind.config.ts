@@ -14,9 +14,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       gradients: {
-        "textgradient" : ['to right', '#001F3F', '#4285F4'],
+        textgradient: ["to right", "#001F3F", "#4285F4"],
       },
       animation: {
+        "background-shine": 
+          "background-shine 2s linear infinite",
         "text-slide-2":
           "text-slide-2 5s cubic-bezier(0.83, 0, 0.17, 1) infinite",
         "text-slide-3":
@@ -31,6 +33,7 @@ const config: Config = {
           "text-slide-7 17.5s cubic-bezier(0.83, 0, 0.17, 1) infinite",
         "text-slide-8":
           "text-slide-8 20s cubic-bezier(0.83, 0, 0.17, 1) infinite",
+        
       },
       keyframes: {
         "text-slide-2": {
@@ -171,6 +174,14 @@ const config: Config = {
           },
           "100%": {
             transform: "translateY(-88.88%)",
+          },
+        },
+        "background-shine": {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 200%",
           },
         },
       },

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 
-// import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
 const inter = Inter({ subsets: ["latin"] });
 const Josefin = Josefin_Sans({subsets: ["latin"]});
@@ -19,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Josefin.className}>{children}</body>
+      
+      <body className={`${Josefin.className} flex flex-row-reverse`}>
+      <div className="flex h-screen items-center bg-gradient-to-t from-[#20163f96] via-black  to-[#20163f96]">
+      <Navbar />
+    </div>
+        {children}</body>
     </html>
   );
 }
